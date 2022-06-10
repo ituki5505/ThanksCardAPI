@@ -39,6 +39,9 @@ namespace ThanksCardAPI.Migrations
                     b.Property<long?>("ParentId")
                         .HasColumnType("bigint");
 
+                    b.Property<long>("SonzaiId")
+                        .HasColumnType("bigint");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ParentId");
@@ -128,7 +131,7 @@ namespace ThanksCardAPI.Migrations
                     b.Property<long?>("DepartmentId")
                         .HasColumnType("bigint");
 
-                    b.Property<bool>("IsAdmin")
+                    b.Property<bool>("IsEmployee")
                         .HasColumnType("boolean");
 
                     b.Property<string>("Name")
@@ -136,6 +139,9 @@ namespace ThanksCardAPI.Migrations
 
                     b.Property<string>("Password")
                         .HasColumnType("text");
+
+                    b.Property<long>("Sonzai_Id")
+                        .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
